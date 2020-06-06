@@ -10,17 +10,17 @@ body {
   background-color: black;
   color: aliceblue;
   padding: 25px 0 0 0px;
+  
 }
 
 
-.guide-text {
-    text-align: center; 
-    height: 100px;  
-    vertical-align: middle;
+.guide-text { 
+    height: auto;   
     background-color: rgb(73, 224, 53);
-    color: aliceblue;
-    padding: 25px 25% 0 25%;
-    text-align: justify;
+    color: aliceblue;  
+    padding: 35px 0; 
+    text-align: center; 
+    display: table-cell; 
 }
 
 .page-main {

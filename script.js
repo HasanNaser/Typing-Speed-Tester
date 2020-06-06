@@ -28,6 +28,10 @@ function startTest(e){
 }
 
 function checkSpell(){
+
+    if(!started)
+      startTest();
+      
     let enteredText = INPUT_ENTERED.value;
     let originText = ORGIN.innerHTML;
     let currentMatch  =originText.substring(0,enteredText.length);
@@ -58,6 +62,7 @@ function restTest(){
 }
 
 INPUT_ENTERED.addEventListener("keypress",startTest,false);
+
 INPUT_ENTERED.addEventListener("keyup",checkSpell,false);
 BTN_RESET.addEventListener("click",restTest,false);
 
