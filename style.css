@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: "Lucida Console", Courier, monospace !important;
+  font-size: large !important;
+}
+.page-head {
+  text-align: center; 
+  height: 50px;  
+  vertical-align: middle;
+  background-color: black;
+  color: aliceblue;
+}
+
+
+.guide-text {
+    text-align: center; 
+    height: 100px;  
+    vertical-align: middle;
+    background-color: rgb(73, 224, 53);
+    color: aliceblue;
+}
+
+.page-main {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.test-area {
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+
+.h-origintext {
+    width: 100%;
+    padding: 10px;
+    background:rgba(128, 128, 128, 0.26);
+    border-radius: 5px;
+    text-align: center;
+}
+.student-place{
+    padding :18px 0px 0  0;
+    width: 100%;
+}
+#entered-text{
+    padding: 10px;
+    width: 100%;
+    border: 11px solid gray;
+    border-radius: 5px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: large; 
+    /* transition: all .7s; */
+}
+
+ 
+
+.tester-place{ 
+    padding: 25px;
+    font-size: 25px;  
+    
+}
+#clock{
+    display: inline;
+    
+}
+#reset-btn{ 
+    display: inline;
+    font-size: large;
+    padding:  9px 14px;
+    color: white;
+    border-radius: 5px; 
+    background-color: rgb(48, 48, 207);
+    cursor: pointer;
+}
+#reset-btn:hover{  
+    background-color: rgb(113, 30, 124);
+}   
+
+.successed{
+    border-color: rgb(49, 182, 49) !important;
+}
