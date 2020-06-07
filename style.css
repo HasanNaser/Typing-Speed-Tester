@@ -55,7 +55,22 @@ body {
     /* transition: all .7s; */
 }
 
+#origin-text{
+    display: none;
+    padding: 10px;
+    width: 90%; 
+    border-radius: 5px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: large; 
+    /* transition: all .7s; */
+}
  
+#origin-text-label{
+cursor: pointer;
+}
+#origin-text-label:hover{
+    color: brown;
+    }
 
 .tester-place{ 
     padding: 25px;

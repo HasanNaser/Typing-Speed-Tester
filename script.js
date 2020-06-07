@@ -1,4 +1,7 @@
-const ORGIN = document.querySelector("#origin-text");
+const ORGINTEXT = document.querySelector("#origin-text");
+const SMALLTEXT = document.querySelector("#small-text");
+
+const ORGINTEXTLABEL = document.querySelector("#origin-text-label"); 
 const INPUT_ENTERED = document.querySelector("#entered-text");
 const CLOCK = document.querySelector("#clock");
 const BTN_RESET = document.querySelector("#reset-btn");
@@ -33,7 +36,7 @@ function checkSpell(){
       startTest();
       
     let enteredText = INPUT_ENTERED.value;
-    let originText = ORGIN.innerHTML;
+    let originText = ORGINTEXTLABEL.innerHTML;
     let currentMatch  =originText.substring(0,enteredText.length);
   
     if(enteredText === originText)  {
@@ -61,8 +64,32 @@ function restTest(){
       INPUT_ENTERED.style.borderColor ="gray"; 
 }
 
+function saveOriginText(e){
+
+    if(e.keyCode=== 13){
+        ORGINTEXTLABEL.innerHTML=ORGINTEXT.value;
+        ORGINTEXT.style.display="none";
+        SMALLTEXT.style.display="none";
+
+        ORGINTEXTLABEL.style.display="block";
+
+            e.preventDefault();
+        }
+    
+}
+
+function modifyOrginalText(){
+    ORGINTEXT.style.display="block";
+    SMALLTEXT.style.display="block"; 
+    ORGINTEXT.value=ORGINTEXTLABEL.innerHTML;
+    ORGINTEXTLABEL.style.display="none";  
+}
+
 INPUT_ENTERED.addEventListener("keypress",startTest,false);
 
 INPUT_ENTERED.addEventListener("keyup",checkSpell,false);
 BTN_RESET.addEventListener("click",restTest,false);
 
+ORGINTEXTLABEL.addEventListener("click",modifyOrginalText,false);
+
+ORGINTEXT.addEventListener("keypress",saveOriginText,false)
